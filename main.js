@@ -158,15 +158,15 @@ function clickHandler(){
             year : Number(listOfDate[0])
         }
         
-        var isPalindrome = checkPalindromeForAllDateFormats(date);
+        var isPalindromeCheck = checkPalindromeForAllDateFormats(date);
 
-        if(isPalindrome){
+        if(isPalindromeCheck){
             resulRef.innerText = "Congrats ! Your birth day is palindrome !! 😃"
         }
         else{
-            var  [ctr,nextDate] = getNestPalindrome(date);
+            var  [ctrCall,nextDateCall] = getNestPalindrome(date);
 
-            resulRef.innerText = `The next palindrome is ${nextDate.day}-${nextDate.month}-${nextDate.year}, You missed it by ${ctr} days ! 🙄`
+            resulRef.innerText = `The next palindrome is ${nextDateCall.day}-${nextDateCall.month}-${nextDateCall.year}, You missed it by ${ctrCall} days ! 🙄`
         }
         
     }
